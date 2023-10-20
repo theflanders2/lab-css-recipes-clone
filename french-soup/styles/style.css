@@ -7,3 +7,58 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px
 }
+
+header {
+  height: 900px;
+  width: 100%;
+  background-image: url("../images/soup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  font-size: 4.7rem;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 25%;
+}
+
+section {
+  margin: 2% 25%;
+  font-size: 1rem
+}
+
+section img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  /* these settings center an image, the width can be adjusted */
+}
+
+.ingredients ul {
+  list-style: none;
+  /* removes bullets from an unordered list */
+}
+
+/* .ingredients ul > li::before {
+  list-style-type: "i"
+  content: “-”;
+  margin-right: 10px;
+} */
+/* replaces bullets in ul with "-"
+could not get this to work */
+
+.cooking-instructions ol {
+  /* 1. Remove the default list style */  
+  list-style: none;
+}
+
+.cooking-instructions ol > li {
+  /* 2. Create a custom list counter */  
+  counter-increment: listcounter;
+}
+
+.cooking-instructions ol > li::before {
+  /*3. Set the new style for the list markers */
+  content: counter(listcounter) ")";
+}
